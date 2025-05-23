@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Domine o Inglês - Seu Caminho para a Fluência</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    :root {
+      /* Credibilidade e Autoridade */
+      --blue-dark:    #1E3A8A;
+      /* Confiabilidade */
+      --blue-med:     #2196F3;
+      /* Urgência / CTA principal */
+      --orange-cta:   #FF6F00;
+      /* Sucesso / Confirmação */
+      --green-ok:     #28A745;
+      /* Escassez / Alerta */
+      --red-alert:    #DC3545;
+      /* Exclusividade / Premium */
+      --purple-vip:   #6F42C1;
+      /* Fundo neutro */
+      --bg-light:     #F8F9FA;
+      /* Texto padrão */
+      --text-dark:    #343A40;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+    /* Cabeçalho */
+    header {
+      background-color: var(--blue-dark);
+    }
+    header a, header nav a {
+      color: #fff;
+    }
+    header nav a:hover {
+      color: var(--blue-med);
+    }
+
+    /* Hero */
+    #textoHeader {
+      color: #86b4f3; /* um cinza-azulado suave para legibilidade em gradiente */
+    }
+    .btn-primary {
+      background-color: var(--orange-cta);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background-color: #fb8c00;
+      transform: scale(1.05);
+    }
+
+    /* Seções */
+    .bg-primary-blue       { background-color: var(--blue-dark); }
+    .text-primary-blue     { color: var(--blue-dark); }
+    .bg-secondary-blue     { background-color: var(--blue-med); }
+    .text-secondary-blue   { color: var(--blue-med); }
+    .bg-accent-green       { background-color: var(--green-ok); }
+    .text-accent-green     { color: var(--green-ok); }
+    .bg-cta-orange         { background-color: var(--orange-cta); }
+    .hover-bg-cta-orange:hover { background-color: #fb8c00; }
+    .badge-urgency {
+      background-color: var(--red-alert);
+      color: #fff;
+    }
+    .section-premium {
+      background-color: var(--purple-vip);
+    }
+
+    /* Tipografia */
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+    /* Cards e ícones */
+    .feature-icon {
+      color: var(--blue-med);
+    }
+    .card {
+      border-top: 4px solid var(--blue-med);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--blue-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <a href="#" class="text-2xl font-bold">Fluência Agora!</a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#recursos" class="hover:text-secondary-blue transition">Recursos</a></li>
+          <li><a href="#depoimentos" class="hover:text-secondary-blue transition">Depoimentos</a></li>
+          <li><a href="#matricule-se" class="hover:text-secondary-blue transition">Matricule-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-r from-primary-blue to-secondary-blue text-white py-20 text-center rounded-b-3xl shadow-xl">
+    <div class="container mx-auto px-4" id="textoHeader">
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-pulse">
+        Liberte Seu Potencial em Inglês!
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Tudo o que você precisa para dominar o inglês – jogos, recursos interativos e muito mais!
+      </p>
+      <a href="#matricule-se" class="btn-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out">
+        Comece Agora e Transforme Seu Inglês!
+      </a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">Veja como o curso funciona na prática!</h2>
+      <div class="flex justify-center">
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden max-w-3xl w-full">
+          <div class="relative" style="padding-bottom: 56.25%;">
+            <iframe class="absolute top-0 left-0 w-full h-full"
+              src="videos/cursoDentro.mp4"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-primary-blue mb-2">Módulo de Pronúncia do Curso</h3>
+            <p class="text-gray-700">Assista a este vídeo para entender a metodologia e ver como nossos recursos exclusivos vão acelerar seu aprendizado de inglês.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recursos" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">O que você vai encontrar no curso:</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Cada card ganha a borda secundária azul e ícone padronizado -->
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card">
+          <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Aprenda com Jogos Divertidos</h3>
+          <p class="text-gray-700">Transforme o aprendizado em uma aventura! Nossos jogos interativos tornam a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card">
+          <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Aprenda com Jogos Divertidos</h3>
+          <p class="text-gray-700">Transforme o aprendizado em uma aventura! Nossos jogos interativos tornam a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card">
+          <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Aprenda com Jogos Divertidos</h3>
+          <p class="text-gray-700">Transforme o aprendizado em uma aventura! Nossos jogos interativos tornam a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+        </div>
+        <!-- ... repita para os outros cards ... -->
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-inner">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8">Bônus Exclusivos para Você!</h2>
+        <p class="text-xl mb-10 max-w-2xl mx-auto">Ao se matricular hoje, você garante acesso a estes brindes incríveis que vão acelerar ainda mais seu aprendizado:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
+                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                <span>Acesso Vitalício a Novas Aulas e Atualizações</span>
+            </label>
+            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
+                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                <span>Suporte Direto com o Instrutor por WhatsApp</span>
+            </label>
+            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
+                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                <span>Certificado de Conclusão Reconhecido</span>
+            </label>
+            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
+                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                <span>Certificado de Conclusão Reconhecido</span>
+            </label>
+            <!-- Adicione mais itens aqui -->
+        </div>
+
+      <p class="text-2xl font-semibold mt-12">Não perca essa oportunidade única!</p>
+    </div>
+  </section>
+
+  <section id="matricule-se" class="bg-accent-green text-white py-16 text-center shadow-inner">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-6">Pronto para a Fluência?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Não perca mais tempo! Inscreva-se hoje e comece sua jornada rumo ao domínio do inglês.
+      </p>
+      <a href="#" class="btn-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out">
+        Quero Me Matricular Agora!
+      </a>
+    </div>
+  </section>
+
+  <footer class="text-white py-8 text-center">
+    <div class="container mx-auto px-4">
+      <p>&copy; 2025 Fluência Agora! Todos os direitos reservados.</p>
+      <p class="mt-2">
+        <a href="#" class="hover:underline text-gray-200">Política de Privacidade</a> |
+        <a href="#" class="hover:underline text-gray-200">Termos de Uso</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
