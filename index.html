@@ -1,221 +1,705 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domine o Inglês - Seu Caminho para a Fluência</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <style>
-    :root {
-      /* Credibilidade e Autoridade */
-      --blue-dark:    #1E3A8A;
-      /* Confiabilidade */
-      --blue-med:     #2196F3;
-      /* Urgência / CTA principal */
-      --orange-cta:   #FF6F00;
-      /* Sucesso / Confirmação */
-      --green-ok:     #28A745;
-      /* Escassez / Alerta */
-      --red-alert:    #DC3545;
-      /* Exclusividade / Premium */
-      --purple-vip:   #6F42C1;
-      /* Fundo neutro */
-      --bg-light:     #F8F9FA;
-      /* Texto padrão */
-      --text-dark:    #343A40;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-    }
-    /* Cabeçalho */
-    header {
-      background-color: var(--blue-dark);
-    }
-    header a, header nav a {
-      color: #fff;
-    }
-    header nav a:hover {
-      color: var(--blue-med);
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Domine o Inglês - Seu Caminho para a Fluência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    /* Hero */
-    #textoHeader {
-      color: #86b4f3; /* um cinza-azulado suave para legibilidade em gradiente */
-    }
-    .btn-primary {
-      background-color: var(--orange-cta);
-      color: #fff;
-    }
-    .btn-primary:hover {
-      background-color: #fb8c00;
-      transform: scale(1.05);
-    }
+    <style>
+        /* Variáveis de cor personalizadas */
+        :root {
+            --blue-dark: #1E3A8A; /* Credibilidade e Autoridade */
+            --blue-med: #2196F3; /* Confiabilidade */
+            --orange-cta: #FF6F00; /* Urgência / CTA principal */
+            --green-ok: #28A745; /* Sucesso / Confirmação */
+            --red-alert: #DC3545; /* Escassez / Alerta */
+            --purple-vip: #6F42C1; /* Exclusividade / Premium */
+            --bg-light: #F8F9FA; /* Fundo neutro */
+            --text-dark: #343A40; /* Texto padrão */
+        }
 
-    /* Seções */
-    .bg-primary-blue       { background-color: var(--blue-dark); }
-    .text-primary-blue     { color: var(--blue-dark); }
-    .bg-secondary-blue     { background-color: var(--blue-med); }
-    .text-secondary-blue   { color: var(--blue-med); }
-    .bg-accent-green       { background-color: var(--green-ok); }
-    .text-accent-green     { color: var(--green-ok); }
-    .bg-cta-orange         { background-color: var(--orange-cta); }
-    .hover-bg-cta-orange:hover { background-color: #fb8c00; }
-    .badge-urgency {
-      background-color: var(--red-alert);
-      color: #fff;
-    }
-    .section-premium {
-      background-color: var(--purple-vip);
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
 
-    /* Tipografia */
-    h1, h2, h3 {
-      line-height: 1.2;
-    }
-    /* Cards e ícones */
-    .feature-icon {
-      color: var(--blue-med);
-    }
-    .card {
-      border-top: 4px solid var(--blue-med);
-    }
+        /* Estilos específicos para o cabeçalho e navegação */
+        header {
+            background-color: var(--blue-dark);
+        }
+        header a {
+            color: #fff;
+        }
+        header nav a:hover {
+            color: var(--blue-med);
+        }
 
-    /* Rodapé */
-    footer {
-      background-color: var(--blue-dark);
-    }
-  </style>
+        /* Hero Section - Gradiente definido via CSS customizado */
+        .hero-gradient {
+            background: linear-gradient(to right, var(--blue-dark), var(--blue-med));
+        }
+
+        /* Botão Principal */
+        .btn-primary-custom { /* Renomeado para evitar conflito com Bootstrap */
+            background-color: var(--orange-cta);
+            color: #fff;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .btn-primary-custom:hover {
+            background-color: #fb8c00;
+            transform: scale(1.05);
+        }
+
+        /* Cores de seções e textos baseadas nas variáveis */
+        .bg-primary-blue-custom { background-color: var(--blue-dark); }
+        .text-primary-blue-custom { color: var(--blue-dark); }
+        .bg-secondary-blue-custom { background-color: var(--blue-med); }
+        .text-secondary-blue-custom { color: var(--blue-med); }
+        .bg-accent-green-custom { background-color: var(--green-ok); }
+        .text-accent-green-custom { color: var(--green-ok); }
+        .bg-cta-orange-custom { background-color: var(--orange-cta); }
+        .hover-bg-cta-orange-custom:hover { background-color: #fb8c00; }
+        .badge-urgency {
+            background-color: var(--red-alert);
+            color: #fff;
+        }
+        .text-purple-vip {
+            color: var(--purple-vip);
+        }
+
+        /* Tipografia */
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+
+        /* Cards de Recursos */
+        .feature-icon {
+            color: var(--blue-med);
+        }
+        .card-feature-border { /* Estilo de borda para os cards */
+            border-top: 4px solid var(--blue-med);
+        }
+
+        /* Estilos para os cards de planos */
+        .card-plan {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-plan:hover {
+            transform: translateY(-5px);
+        }
+        .card-plan.essential {
+            border-top: 4px solid var(--blue-med);
+        }
+        .card-plan.premium {
+            border-top: 4px solid var(--purple-vip);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-plan.premium::before {
+            content: "Mais Recomendado";
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background-color: var(--orange-cta);
+            color: white;
+            padding: 5px 30px;
+            font-weight: bold;
+            font-size: 0.875rem;
+            transform: rotate(45deg);
+            transform-origin: top left;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .card-plan.premium h3 {
+            color: var(--purple-vip);
+        }
+        .card-plan.essential h3 {
+            color: var(--blue-med);
+        }
+
+        /* Botão do Plano */
+        .btn-plan {
+            background-color: var(--orange-cta);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Full rounded */
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            display: block;
+            text-align: center;
+            margin-top: auto; /* Empurra o botão para a parte inferior do card */
+        }
+        .btn-plan:hover {
+            background-color: #fb8c00;
+            transform: scale(1.02);
+        }
+
+        /* Selo de Garantia */
+        .guarantee-seal {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .guarantee-seal img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .guarantee-seal h4 {
+            color: var(--blue-dark);
+        }
+        .guarantee-seal p {
+            color: var(--text-dark);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--blue-dark);
+        }
+
+        /* Carrossel Customizado (Sem Bootstrap CSS) */
+        .custom-carousel {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            /* Ajuste da altura mínima para o carrossel em si, para que a legenda tenha espaço abaixo */
+            min-height: 300px; /* Base height for the carousel container */
+        }
+
+        /* Carrossel de Vídeos */
+        #courseCarousel {
+            max-width: 700px; /* Largura ideal para vídeos 16:9, ajuste conforme necessidade */
+        }
+
+        .custom-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .custom-carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column; /* Empilha a mídia e a legenda */
+            align-items: center;
+            justify-content: flex-start; /* Alinha o conteúdo ao topo para dar espaço à legenda */
+            background-color: #f0f0f0;
+            position: relative; /* Mantém a posição relativa para os controles */
+            padding-bottom: 1rem; /* Espaço para a legenda na parte inferior */
+        }
+        .custom-carousel-item video {
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Limita a altura máxima da mídia */
+            object-fit: contain; /* Garante que o vídeo seja contido, sem cortes */
+            display: block;
+        }
+        .custom-carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Limita a altura máxima da mídia */
+            object-fit: contain; /* Garante que a imagem seja contida */
+            display: block;
+        }
+
+        /* Responsividade para altura do carrossel */
+        @media (max-width: 768px) {
+            .custom-carousel-item {
+                min-height: 300px; /* Adjust min-height for smaller screens */
+            }
+            .custom-carousel-item video,
+            .custom-carousel-item img {
+                max-height: 250px;
+            }
+        }
+        @media (max-width: 480px) {
+            .custom-carousel-item {
+                min-height: 250px;
+            }
+            .custom-carousel-item video,
+            .custom-carousel-item img {
+                max-height: 200px;
+            }
+        }
+
+        .custom-carousel-caption {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para o texto em mobile */
+            padding: 1rem;
+            box-sizing: border-box;
+            text-align: left;
+            color: var(--text-dark);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .custom-carousel-caption {
+                position: static; /* Volta a ser estático fora do fluxo normal */
+                margin-top: 1rem; /* Adiciona um espaço acima */
+                background-color: transparent; /* Remove o fundo do caption em telas grandes */
+                padding: 0; /* Remove padding extra */
+            }
+        }
+
+        /* Estilização dos botões de controle do carrossel */
+        .custom-carousel-controls button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.4); /* Fundo um pouco mais claro */
+            color: white;
+            border: none;
+            padding: 0.8rem 1.2rem; /* Ajuste no padding */
+            cursor: pointer;
+            z-index: 20;
+            font-size: 1.8rem; /* Aumentar tamanho do ícone */
+            border-radius: 9999px; /* Completamente redondo */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .custom-carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.6); /* Escurece no hover */
+            transform: translateY(-50%) scale(1.1); /* Efeito de escala */
+        }
+        .custom-carousel-controls .prev {
+            left: 10px;
+        }
+        .custom-carousel-controls .next {
+            right: 10px;
+        }
+
+        .custom-carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 20;
+        }
+        .custom-carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .custom-carousel-indicators button.active {
+            background-color: var(--blue-med);
+            border-color: var(--blue-dark);
+        }
+
+        /* Estilos para as imagens de depoimento */
+        .testimonial-item {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .testimonial-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* Slightly rounded corners for images */
+            margin-bottom: 1rem;
+            object-fit: cover; /* Ensures image covers the area, might crop */
+        }
+        .testimonial-item figcaption {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .testimonial-item h3 {
+            color: var(--primary-blue-custom);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilos para o card do professor */
+        .professor-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            border-top: 5px solid var(--orange-cta); /* Uma borda para destacar */
+        }
+        .professor-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem auto;
+            border: 4px solid var(--blue-med); /* Borda ao redor da imagem do professor */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .professor-card h3 {
+            color: var(--blue-dark);
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+        .professor-card p {
+            color: var(--text-dark);
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
-  <header class="text-white py-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <a href="#" class="text-2xl font-bold">Fluência Agora!</a>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="#recursos" class="hover:text-secondary-blue transition">Recursos</a></li>
-          <li><a href="#depoimentos" class="hover:text-secondary-blue transition">Depoimentos</a></li>
-          <li><a href="#matricule-se" class="hover:text-secondary-blue transition">Matricule-se</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="bg-gradient-to-r from-primary-blue to-secondary-blue text-white py-20 text-center rounded-b-3xl shadow-xl">
-    <div class="container mx-auto px-4" id="textoHeader">
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-pulse">
-        Liberte Seu Potencial em Inglês!
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-        Tudo o que você precisa para dominar o inglês – jogos, recursos interativos e muito mais!
-      </p>
-      <a href="#matricule-se" class="btn-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out">
-        Comece Agora e Transforme Seu Inglês!
-      </a>
-    </div>
-  </section>
-
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">Veja como o curso funciona na prática!</h2>
-      <div class="flex justify-center">
-        <div class="bg-white rounded-lg shadow-xl overflow-hidden max-w-3xl w-full">
-          <div class="relative" style="padding-bottom: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full"
-              src="videos/cursoDentro.mp4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-primary-blue mb-2">Módulo de Pronúncia do Curso</h3>
-            <p class="text-gray-700">Assista a este vídeo para entender a metodologia e ver como nossos recursos exclusivos vão acelerar seu aprendizado de inglês.</p>
-          </div>
+    <header class="text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold">Fluência Agora!</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#recursos" class="hover:text-secondary-blue-custom transition duration-300">Recursos</a></li>
+                    <li><a href="#depoimentos" class="hover:text-secondary-blue-custom transition duration-300">Depoimentos</a></li>
+                    <li><a href="#matricule-se" class="hover:text-secondary-blue-custom transition duration-300">Matricule-se</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="recursos" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">O que você vai encontrar no curso:</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Cada card ganha a borda secundária azul e ícone padronizado -->
-        <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card">
-          <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
-          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Aprenda com Jogos Divertidos</h3>
-          <p class="text-gray-700">Transforme o aprendizado em uma aventura! Nossos jogos interativos tornam a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+    <section class="hero-gradient text-white py-20 text-center rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-pulse">
+                Liberte Seu Potencial em Inglês!
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Tudo o que você precisa para dominar o inglês – jogos, recursos interativos e muito mais!
+            </p>
+            <a href="#matricule-se" class="btn-primary-custom font-bold py-3 px-8 rounded-full shadow-lg">
+                Comece Agora e Transforme Seu Inglês!
+            </a>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card">
-          <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
-          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Aprenda com Jogos Divertidos</h3>
-          <p class="text-gray-700">Transforme o aprendizado em uma aventura! Nossos jogos interativos tornam a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary-blue-custom mb-12">Veja como o curso funciona na prática!</h2>
+            <div class="flex justify-center">
+                <div class="custom-carousel" id="courseCarousel">
+                    <div class="custom-carousel-inner">
+                        <div class="custom-carousel-item">
+                            <video controls>
+                                <source src="videos/cursoDentro.mp4" type="video/mp4">
+                                Seu navegador não suporta o vídeo.
+                            </video>
+                            <div class="custom-carousel-caption">
+                                <h3 class="text-2xl font-semibold text-primary-blue-custom mb-2">Módulo de Pronúncia do Curso</h3>
+                                <p class="text-gray-700">Assista a este vídeo para entender a metodologia e ver como nossos recursos exclusivos vão acelerar seu aprendizado de inglês.</p>
+                            </div>
+                        </div>
+                        <div class="custom-carousel-item">
+                            <video controls>
+                                <source src="videos/cursoDetalhes.mp4" type="video/mp4">
+                                Seu navegador não suporta o vídeo.
+                            </video>
+                            <div class="custom-carousel-caption">
+                                <h3 class="text-2xl font-semibold text-primary-blue-custom mb-2">Visão Geral da Plataforma</h3>
+                                <p class="text-gray-700">Explore a interface do nosso curso e descubra todas as ferramentas interativas à sua disposição.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-carousel-controls">
+                        <button class="prev">&lt;</button>
+                        <button class="next">&gt;</button>
+                    </div>
+                    <div class="custom-carousel-indicators">
+                        <button class="active"></button>
+                        <button></button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card">
-          <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
-          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Aprenda com Jogos Divertidos</h3>
-          <p class="text-gray-700">Transforme o aprendizado em uma aventura! Nossos jogos interativos tornam a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+    </section>
+
+    <section id="recursos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary-blue-custom mb-12">O que você vai encontrar no curso:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card-feature-border">
+                    <i class="fa-solid fa-video feature-icon text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue-custom mb-4">Curso em vídeo completo</h3>
+                    <p class="text-gray-700">Com o curso em vídeo você sairá do zero até a fluência.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card-feature-border">
+                    <i class="fas fa-gamepad feature-icon text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue-custom mb-4">Aprenda com Jogos</h3>
+                    <p class="text-gray-700">Transforme o aprendizado em uma aventura! Aprenda inglês com jogos, o que torna a gramática e o vocabulário cativantes e fáceis de memorizar.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card-feature-border">
+                    <i class="fa-regular fa-file-audio feature-icon text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue-custom mb-4">Audiobook</h3>
+                    <p class="text-gray-700">Aprenda inglês enquanto realiza suas tarefas cotidianas.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card-feature-border">
+                    <i class="fa-solid fa-book feature-icon text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue-custom mb-4">Biblioteca de materiais</h3>
+                    <p class="text-gray-700">Biblioteca de textos com áudios e cadernos de exercícios.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card-feature-border">
+                    <i class="fa-solid fa-calendar-days feature-icon text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue-custom mb-4">Cronograma para fluência</h3>
+                    <p class="text-gray-700">Planner da fluência para se organizar e atingir a fluência o mais rápido possível.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 card-feature-border">
+                    <i class="fa-solid fa-scroll feature-icon text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue-custom mb-4">Certificado de Conclusão</h3>
+                    <p class="text-gray-700">Incremente seu currículo com um certificado e abra portas.</p>
+                </div>
+            </div>
         </div>
-        <!-- ... repita para os outros cards ... -->
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-inner">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-8">Bônus Exclusivos para Você!</h2>
-        <p class="text-xl mb-10 max-w-2xl mx-auto">Ao se matricular hoje, você garante acesso a estes brindes incríveis que vão acelerar ainda mais seu aprendizado:</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
-                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
-                <span>Acesso Vitalício a Novas Aulas e Atualizações</span>
-            </label>
-            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
-                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
-                <span>Suporte Direto com o Instrutor por WhatsApp</span>
-            </label>
-            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
-                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
-                <span>Certificado de Conclusão Reconhecido</span>
-            </label>
-            <label class="flex items-start gap-x-2 text-lg text-gray-100 mb-3">
-                <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
-                <span>Certificado de Conclusão Reconhecido</span>
-            </label>
-            <!-- Adicione mais itens aqui -->
+    ---
+
+    <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-inner py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Bônus Exclusivos para Você!</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Ao se matricular hoje, você garante acesso a estes brindes incríveis que vão acelerar ainda mais seu aprendizado:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+                <div class="flex items-start gap-x-2 text-lg text-gray-100">
+                    <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                    <span>E-book com 500 frases e suas pronúncias.</span>
+                </div>
+                <div class="flex items-start gap-x-2 text-lg text-gray-100">
+                    <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                    <span>Biblioteca de textos com áudios</span>
+                </div>
+                <div class="flex items-start gap-x-2 text-lg text-gray-100">
+                    <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                    <span>Caderno de exercícios</span>
+                </div>
+                <div class="flex items-start gap-x-2 text-lg text-gray-100">
+                    <i class="bi bi-patch-check-fill text-yellow-400 text-xl relative -top-0.5"></i>
+                    <span>Planner da fluência</span>
+                </div>
+            </div>
+            <p class="text-2xl font-semibold mt-12">Não perca essa oportunidade única!</p>
         </div>
+    </section>
 
-      <p class="text-2xl font-semibold mt-12">Não perca essa oportunidade única!</p>
-    </div>
-  </section>
+    ---
 
-  <section id="matricule-se" class="bg-accent-green text-white py-16 text-center shadow-inner">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-6">Pronto para a Fluência?</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Não perca mais tempo! Inscreva-se hoje e comece sua jornada rumo ao domínio do inglês.
-      </p>
-      <a href="#" class="btn-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out">
-        Quero Me Matricular Agora!
-      </a>
-    </div>
-  </section>
+    <section id="professor" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-primary-blue-custom mb-12">Conheça o Professor</h2>
+            <div class="professor-card">
+                <img src="imagens/professor.jpg" alt="Foto do Professor" class="rounded-full mx-auto mb-6">
+                <h3 class="text-4xl font-bold text-primary-blue-custom mb-4">Emerson Nogueira</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Professor de inglês, lecionei mais de 7 mil alunos em meus cursos nos últimos 8 anos.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                    Emerson Nogueira é reconhecido por sua **didática clara, paciência e habilidade** em desmistificar as dificuldades da língua inglesa, guiando cada estudante em sua jornada rumo à fluência. Prepare-se para aprender com um verdadeiro especialista!
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <footer class="text-white py-8 text-center">
-    <div class="container mx-auto px-4">
-      <p>&copy; 2025 Fluência Agora! Todos os direitos reservados.</p>
-      <p class="mt-2">
-        <a href="#" class="hover:underline text-gray-200">Política de Privacidade</a> |
-        <a href="#" class="hover:underline text-gray-200">Termos de Uso</a>
-      </p>
-    </div>
-  </footer>
+    ---
+
+    <section id="depoimentos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary-blue-custom mb-12">Depoimentos dos nossos alunos:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <figure class="testimonial-item">
+                    <img src="imagens/depoimento1.jpg" alt="Depoimento de aluno sobre a qualidade do curso.">
+                    <figcaption>
+                        <h3 class="text-2xl font-semibold mb-2 text-primary-blue-custom">"Ensino diferenciado!"</h3>
+                    </figcaption>
+                </figure>
+                <figure class="testimonial-item">
+                    <img src="imagens/depoimento2.png" alt="Feedback positivo de aluno sobre a didática.">
+                    <img src="imagens/depoimento4.jpeg" alt="Feedback">
+                    <img src="imagens/depoimento5.jpeg" alt="Feedback t">
+                    <figcaption>
+                        <h3 class="text-2xl font-semibold mb-2 text-primary-blue-custom">"O curso é perfeito!"</h3>
+                    </figcaption>
+                </figure>
+                <figure class="testimonial-item">
+                    <img src="imagens/depoimento3.jpg" alt="Testemunho de aluno sobre o rápido progresso.">
+                    <figcaption>
+                        <h3 class="text-2xl font-semibold mb-2 text-primary-blue-custom">"Os materiais são maravilhosos!"</h3>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section id="matricule-se" class="bg-gradient-to-r from-green-500 to-green-700 text-white py-16 text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6">Escolha o seu plano e comece hoje!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Temos duas opções para você alcançar a fluência no inglês:
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <div class="card-plan essential max-w-sm w-full mx-auto md:mx-0">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Plano Essencial</h3>
+                        <p class="text-gray-700 text-lg mb-4">Acesso ao curso completo em vídeo e biblioteca de materiais.</p>
+                        <ul class="text-gray-600 text-left mb-6 space-y-2">
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Curso em vídeo completo</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Biblioteca de materiais</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-x-circle-fill text-red-500"></i> Suporte via WhatsApp</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-x-circle-fill text-red-500"></i> Diversos E-books e Audiobooks</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-x-circle-fill text-red-500"></i> Acesso vitalício</li>
+                        </ul>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-800 mb-6">R$ 36,99 <span class="text-base text-gray-500 block font-normal">à vista</span><span class="text-base text-gray-500 block font-normal">ou 8x de <strong>R$5,27</strong></span></div>
+                    <a href="#" class="btn-plan w-full">Assinar Plano Essencial</a>
+                </div>
+
+                <div class="card-plan premium max-w-sm w-full mx-auto md:mx-0">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Plano Premium</h3>
+                        <p class="text-gray-700 text-lg mb-4">Tudo do Plano Essencial **mais** jogos, bônus e certificado.</p>
+                        <ul class="text-gray-600 text-left mb-6 space-y-2">
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Curso em vídeo completo</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Biblioteca de materiais</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Suporte via WhatsApp</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Diversos E-books e Audiobooks</li>
+                            <li class="flex items-center gap-x-2"><i class="bi bi-check-circle-fill text-green-500"></i> Acesso vitalício</li>
+                        </ul>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-800 mb-6">R$ 73,99 <span class="text-base text-gray-500 block font-normal">à vista</span><span class="text-base text-gray-500 block font-normal">ou 12x de R$7,65</span></div>
+                    <a href="#" class="btn-plan w-full">Assinar Plano Premium</a>
+                </div>
+            </div>
+
+            <div class="guarantee-seal">
+                <h4 class="text-2xl font-bold mb-4">Sua Satisfação é Nossa Prioridade!</h4>
+                <img src="imagens/seloGarantia.webp" alt="Selo de Garantia de Satisfação" class="mx-auto mb-2">
+                <p class="text-lg max-w-xl mx-auto">
+                    Oferecemos uma **garantia incondicional de 7 dias**. Se por qualquer motivo você não estiver 100% satisfeito com o curso, devolvemos seu dinheiro integralmente, sem perguntas!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Fluência Agora! Todos os direitos reservados.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:underline text-gray-200">Política de Privacidade</a> |
+                <a href="#" class="hover:underline text-gray-200">Termos de Uso</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para Carrossel Customizado (Substitui o JS do Bootstrap)
+        function setupCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            // Se o carrossel não existe (como o de depoimentos agora), não faz nada
+            if (!carousel) return;
+
+            const inner = carousel.querySelector('.custom-carousel-inner');
+            const items = carousel.querySelectorAll('.custom-carousel-item');
+            const prevBtn = carousel.querySelector('.prev');
+            const nextBtn = carousel.querySelector('.next');
+            const indicators = carousel.querySelectorAll('.custom-carousel-indicators button');
+
+            let currentIndex = 0;
+            let intervalId; // Para autoplay
+
+            function updateCarousel() {
+                // Certifica-se de que há itens antes de tentar acessar offsetWidth
+                if (items.length === 0) return;
+
+                const itemWidth = items[0].offsetWidth;
+                inner.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                if (currentIndex < 0) {
+                    currentIndex = items.length - 1;
+                } else if (currentIndex >= items.length) {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            // Event Listeners
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            indicators.forEach((button, index) => {
+                button.addEventListener('click', () => goToSlide(index));
+            });
+
+            // Recalcular no redimensionamento
+            window.addEventListener('resize', updateCarousel);
+            // Inicializar o carrossel
+            updateCarousel();
+
+            // Autoplay (opcional)
+            function startAutoplay() {
+                intervalId = setInterval(nextSlide, 5000); // Muda a cada 5 segundos
+            }
+
+            function resetAutoplay() {
+                clearInterval(intervalId);
+                startAutoplay();
+            }
+
+            startAutoplay(); // Inicia o autoplay
+        }
+
+        // Inicializa o carrossel de cursos (o de depoimentos foi removido)
+        document.addEventListener('DOMContentLoaded', () => {
+            setupCarousel('courseCarousel');
+        });
+    </script>
 
 </body>
 </html>
